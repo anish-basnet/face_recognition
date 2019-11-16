@@ -15,3 +15,5 @@ def return_image(file_path):
     ImageFile.LOAD_TRUNCATED_IMAGES = True
     image = Image.open(file_path).convert('RGB')
     return image
+
+# prmaod branch setup
