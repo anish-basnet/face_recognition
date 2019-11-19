@@ -4,11 +4,9 @@ Email : pankajbhattarai100@gmail.com
 """
 import os
 import pickle
-from collections import orderddict
-
 import cv2
 import numpy as np
-
+from collections import
 from face_recognition.utils.imgutils import return_image
 
 if __name__ == '__main__':
@@ -16,7 +14,7 @@ if __name__ == '__main__':
     files = os.listdir(path)
     write_path = os.path.join('data', 'processing', 'threshold', 'test.pkl')
 
-    vectors = orderddict
+    vectors =
     for file in files:
         bgr_image = cv2.cvtColor(np.array(return_image(file)), cv2.COLOR_RGB2BGR)
         gray_image = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2GRAY)
@@ -27,3 +25,5 @@ if __name__ == '__main__':
     with open(write_path, 'wb') as fid:
         pickle.dump(vectors, fid)
         fid.close()
+
+
