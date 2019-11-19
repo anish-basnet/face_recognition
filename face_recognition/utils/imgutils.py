@@ -16,4 +16,3 @@ def return_image(file_path):
     image = Image.open(file_path).convert('RGB')
     return image
 
-# prmaod branch setup
