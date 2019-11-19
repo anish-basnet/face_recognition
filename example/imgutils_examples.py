@@ -16,3 +16,10 @@ if __name__ == '__main__':
     image = cv2.cvtColor(np.array(return_image(path)), cv2.COLOR_RGB2BGR)
     cv2.imshow('image', image)
     cv2.waitKey(0)
+
+
+
+
+
+
+
