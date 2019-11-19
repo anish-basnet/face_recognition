@@ -12,7 +12,6 @@ from face_recognition.utils.utils import list_files
 if __name__ == '__main__':
     path = os.path.join('data', 'dataset', 'test')
     write_path = os.path.join('data', 'processing', 'test', 'test.pkl')
-
     files = list_files(path)
     vectors = get_image_array(files)
 
