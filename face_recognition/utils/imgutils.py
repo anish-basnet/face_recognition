@@ -17,7 +17,10 @@ def return_image(file_path=None):
     if file_path is None:
         return None
     ImageFile.LOAD_TRUNCATED_IMAGES = True
-    image = Image.open(file_path).convert('RGB')
+    try:
+        image = Image.open(file_path).convert('RGB')
+    except IOError:
+        return None
     return image
 
 
