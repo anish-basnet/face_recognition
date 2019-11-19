@@ -7,6 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def similarity(source_vector=None, destination_vector=None):
     """
+    This method provides the cosine similarity between two vectors.
     :param source_vector: -> list
     :param destination_vector: -> list
     :return: ->
