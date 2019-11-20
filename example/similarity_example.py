@@ -9,7 +9,8 @@ import numpy as np
 import sys
 
 from face_recognition.utils.imgutils import return_image
-from face_recognition.utils.metrics import similarity
+from face_recognition.utils.metrics import similarity, image_ssim
+from scipy import sparse
 
 if __name__ == '__main__':
     path1 = os.path.join('data', 'dataset', 'test', '0000_02176.pgm')
@@ -21,8 +22,5 @@ if __name__ == '__main__':
     resized_image_1 = cv2.resize(image1, (64, 64))
     resized_image_2 = cv2.resize(image2, (64, 64))
 
-    result = similarity(resized_image_1, resized_image_2)
-    # result give numpy ndimension array
-    # print(result)
-    average_result = np.mean(result)
-    print("{} - {} | Similarity score : {} .".format(path1, path2, average_result))
+    result = image_ssim(resized_image_1, resized_image_2)
+    print("{} - {} | Similarity score using Structural Similarity Index : {} .".format(path1, path2, result))
